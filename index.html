@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validação de Dados</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    .form-container { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 15px; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #0078d4; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #005a9e; }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Validação de Cadastro</h2>
+  
+  <label for="cpf">CPF:</label>
+  <input type="text" id="cpf" placeholder="000.000.000-00">
+  
+  <label for="telefone">Telefone:</label>
+  <input type="text" id="telefone" placeholder="(00) 00000-0000">
+  
+  <button onclick="buscarDados()">Buscar</button>
+
+  <div id="resultado" style="display:none;">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco">
+
+    <label for="banco">Banco:</label>
+    <input type="text" id="banco">
+
+    <label for="pix">Chave PIX:</label>
+    <input type="text" id="pix">
+
+    <button onclick="confirmar()">Confirmar</button>
+  </div>
+</div>
+
+<script>
+  function buscarDados() {
+    const cpf = document.getElementById("cpf").value;
+    const tel = document.getElementById("telefone").value;
+
+    const encontrado = (cpf === "12345678900" && tel === "11999999999"); // Simulação
+
+    const resultadoDiv = document.getElementById("resultado");
+    resultadoDiv.style.display = "block";
+
+    if (encontrado) {
+      document.getElementById("nome").value = "Pedro Miguel";
+      document.getElementById("endereco").value = "Rua das Rosas, 123";
+      document.getElementById("banco").value = "Nubank";
+      document.getElementById("pix").value = "pedro@email.com";
+    } else {
+      document.getElementById("nome").value = "";
+      document.getElementById("endereco").value = "";
+      document.getElementById("banco").value = "";
+      document.getElementById("pix").value = "";
+      alert("Dados não encontrados. Preencha manualmente.");
+    }
+  }
+
+  function confirmar() {
+    alert("Dados confirmados com sucesso! (Simulado)");
+  }
+</script>
+
+</body>
+</html>
