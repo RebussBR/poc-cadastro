@@ -42,3 +42,43 @@ Para publicar esta página online:
 
 ## 📦 Estrutura do Projeto
 
+├── index.html # Página com lógica e validações embutidas
+├── README.md # Documentação
+└── [opcional] CSS/JS externos (tudo inline por padrão)
+
+
+---
+
+## 🛡️ Segurança e LGPD
+
+> Esta versão é apenas front-end. Para estar em conformidade com a LGPD, recomenda-se:
+
+- Proteger o back-end com autenticação
+- Criptografar dados sensíveis em trânsito e em repouso
+- Incluir consentimento do usuário
+- Auditar modificações
+
+---
+
+## 🛠️ Próximos passos (roadmap)
+
+- [ ] Integração com API real (Dataverse, Azure SQL, etc.)
+- [ ] Autenticação por token ou Azure AD B2C
+- [ ] Salvamento de dados via formulário dinâmico
+- [ ] Validação de conta com dígito verificador por banco
+- [ ] Upload de documentos (opcional)
+
+---
+
+## ✨ Exemplo ao vivo
+
+> (adicione aqui o link do GitHub Pages quando publicar)
+
+---
+
+## 👨‍💻 Autor
+
+**Pedro Miguel Donalonso Corrêa**  
+IT Lead @ Rebuss | Business Intelligence & Automação  
+
+---
